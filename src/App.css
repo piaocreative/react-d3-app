@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  body {
+    @apply transition duration-150 ease-in-out;
+  }
+  html.light body {
+    background: #f5f1f0;
+  }
+
+  html.dark body {
+    @apply bg-gray-900;
+  }
+
+  .vertical-bar:hover .bar {
+    @apply stroke-1 stroke-black dark:stroke-white;
+  }
+
+  .vertical-bar:hover .active {
+    @apply stroke-2;
+  }
+
+  .subtitle {
+    @apply text-sm dark:text-white;
+  }
+}
+
+.text-xxs {
+  font-size: 0.7rem;
+  line-height: 0.9rem;
+}
